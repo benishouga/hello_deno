@@ -21,8 +21,6 @@ Run '/home/xxxxx/.deno/bin/deno --help' to get started
 
 ### コメントに従って .bash_profile なり .bashrc に環境変数を追加
 
-(xxxxx は ユーザー名)
-
 ```shell
 export DENO_INSTALL="/home/xxxxx/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -36,8 +34,6 @@ deno 1.0.2
 v8 8.4.300
 typescript 3.9.2
 ```
-
-(公式だと)
 
 ## IDE サポート
 
