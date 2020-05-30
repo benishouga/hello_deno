@@ -229,7 +229,7 @@ Compile file:///home/xxxxx/work/deno/hello_server.ts
 http://localhost:8000/
 ```
 
-http://localhost:8000/ をブラウザで開くと ``
+http://localhost:8000/ をブラウザで開くと `Hello World` と表示される。
 
 一度実行すると deno がライブラリをキャッシュするが、VSCode からもそのキャッシュを見に行くようになるため、VSCode 上もコンパイルエラーは出なくなる。
 
