@@ -1,8 +1,4 @@
-# deno 使ってみる会
-
-公式の Getting Started にならって試していきます。
-（2.2 の **Using TypeScript** のあたりまでの内容です。）
-
+公式の Getting Started にならって試していきます。（2.2 の **Using TypeScript** のあたりまでの内容です。）
 https://deno.land/manual/getting_started
 
 ## インストール
@@ -19,7 +15,7 @@ Manually add the directory to your $HOME/.bash_profile (or similar)
 Run '/home/xxxxx/.deno/bin/deno --help' to get started
 ```
 
-### コメントに従って .bash_profile なり .bashrc に環境変数を追加
+### コメントに従って `.bash_profile` なり `.bashrc` に環境変数を追加
 
 ```shell
 export DENO_INSTALL="/home/xxxxx/.deno"
@@ -40,9 +36,9 @@ typescript 3.9.2
 公式で VSCode 用が提供されていた。<br>
 https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno
 
-`import xxx from "https://deno.land/std/http/server.ts";` のような deno 独特な from 指定の型を解決してくれる様子？
+`import xxx from "https://deno.land/xxx/xxx/xxx.ts";` のような deno 独特な from 指定の型を解決してくれる様子？
 
-JetBrains IDEs や Vim and NeoVim 用も一応あるっぽい。
+JetBrains IDEs や Vim and NeoVim 用もあるっぽい。
 
 ## Runtime API 型定義
 
@@ -89,9 +85,9 @@ Welcome to Deno 🦕
 
 ちゃんと走る様子。
 
-### fetch はそのまま使える様子
+### fetch を使う
 
-hello_fetch.ts を作る
+hello_fetch.ts を作る。ブラウザの Fetch API が使える。
 
 ```typescript
 const url = Deno.args[0];
@@ -139,7 +135,7 @@ error: Uncaught PermissionDenied: network access to "https://example.net/", run 
     at async file:///home/xxxxx/work/deno/hello_fetch.ts:2:13
 ```
 
-### ファイルを読み込んで見る
+### ファイルを読み込む
 
 hello_file.ts を作る
 
@@ -227,9 +223,9 @@ http://localhost:8000/
 
 http://localhost:8000/ をブラウザで開くと `Hello World` と表示される。
 
-一度実行すると deno がライブラリをキャッシュするが、VSCode からもそのキャッシュを見に行くようになるため、VSCode 上もコンパイルエラーは出なくなる。
+一度実行すると deno がライブラリをキャッシュするが、VSCode からもそのキャッシュを見に行くようになるため、VSCode 上もコンパイルエラーは出なくなるっぽい？。。
 
 ## 感想
 
 - 良い感じなのかどうかはあまり分からず
-- Permission の引数はセキュアかもしれないけど、ものすごくめんどい。
+- Permission の引数はセキュアなのかもしれないけど、やっぱり毎回指定しないといけないのはめんどい感・・・。
