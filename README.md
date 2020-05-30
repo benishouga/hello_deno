@@ -44,9 +44,36 @@ typescript 3.9.2
 公式で VSCode 用が提供されていた。<br>
 https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno
 
-`Deno.xxx` な Runtime API の型や `import xxx from "https://deno.land/std/http/server.ts";` deno 独特な from 指定の型を解決してくれる様子？
+`import xxx from "https://deno.land/std/http/server.ts";` のような deno 独特な from 指定の型を解決してくれる様子？
 
 JetBrains IDEs や Vim and NeoVim 用も一応あるっぽい。
+
+## Runtime API 型定義
+
+`Deno.xxx` な Runtime API を VSCode 上でも解決できるようにする
+
+Runtime API の型定義を deno のコマンドで出力する
+
+```
+$ deno types > deno.d.ts
+```
+
+tsconfig.json を作って上記の d.ts を読むようにする
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "deno": ["deno.d.ts"]
+    }
+  }
+}
+```
+
+これで `Deno.xxx` な API が VSCode 上でもエラーにならないはず。
+
+ダメな場合は 一度 VSCode 再起動したら良くなったりするかも。
 
 ## コードを実行してみる
 
